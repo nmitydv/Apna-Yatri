@@ -1,9 +1,9 @@
 ## Short Intro
 
-A comprehensive Travel Management System empowering users to seamlessly book personalized car and driver services. Users can rent vehicles, choose drivers, and administrators oversee driver and vehicle approvals. Experience convenience and control in your travel needs with Tripminder
+A comprehensive Travel Management System empowering users to seamlessly book personalized car and driver services. Users can rent vehicles, choose drivers, and administrators oversee driver and vehicle approvals. Experience convenience and control in your travel needs with Apna Yatri
 
 
-### TripMinder Server 
+### Apna Yatri Server 
 
 ## Build with
 
@@ -257,7 +257,7 @@ Full structure of module
     └── module1.module.ts
 ```
 
-### TripMinder Client
+### Apna Yatri Client
 
 # React + Vite
 
