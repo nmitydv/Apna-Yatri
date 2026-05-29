@@ -249,3 +249,4 @@ Full structure of module
     ├── tasks // task for cron job
     └── module1.module.ts
 ```
+# AllChat_Backend
