@@ -1,3 +1,5 @@
+App Name AllSocialDM Backend
+
 Core Platform
 Authentication (20 APIs)
 Register
@@ -504,3 +506,6 @@ Frontend
 Next.js
 React
 TypeScript
+
+
+create all model servics controller's nad routes and all apis should add on swagger and also create all test cases properly in depthly 

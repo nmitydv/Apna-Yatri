@@ -8,14 +8,6 @@ import { UserBlockedGuard } from 'src/modules/user/guards/user.blocked.guard';
 import { UserNotFoundGuard } from 'src/modules/user/guards/user.not-found.guard';
 import { UserPutToRequestGuard } from 'src/modules/user/guards/user.put-to-request.guard';
 
-
-
-import { createParamDecorator, ExecutionContext } from '@nestjs/common';
-import { VehicleDoc, VehicleEntity } from 'src/modules/vehicle/repository/entities/vehicle.entity';
-
-
-
-
 export function UserGetGuard(): MethodDecorator {
     return applyDecorators(UseGuards(UserPutToRequestGuard, UserNotFoundGuard));
 }
@@ -48,23 +40,3 @@ export function UserUpdateBlockedGuard(): MethodDecorator {
         SetMetadata(USER_BLOCKED_META_KEY, [false])
     );
 }
-
-
-export function vehicleUpdateIsApproveGuard(): MethodDecorator {
-    return applyDecorators(
-        UseGuards(UserPutToRequestGuard, UserNotFoundGuard, UserActiveGuard),
-        SetMetadata(USER_ACTIVE_META_KEY, [false])
-    );
-}
-
-
-
-
-export const vehicleApprove = createParamDecorator(
-    (returnPlain: boolean, ctx: ExecutionContext): VehicleDoc | VehicleEntity => {
-        const { __user } = ctx.switchToHttp().getRequest();
-        return returnPlain ? __user.toObject() : __user;
-    }
-);
-
-

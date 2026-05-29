@@ -12,7 +12,7 @@ export class AwsUploadService {
         , region : this.configService.getOrThrow('AWS_S3_REGION')});
     constructor(private readonly configService:ConfigService){}
     async upload(fileName : string , file:string){
-        var buf = Buffer.from(file.replace(/^data:image\/\w+;base64,/, ""),'base64')
+        const buf = Buffer.from(file.replace(/^data:image\/\w+;base64,/, ""),'base64')
         await this.s3Client.send(
             new PutObjectCommand({
                 Bucket :'singaji-code-masters',

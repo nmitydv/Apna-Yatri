@@ -25,7 +25,7 @@ export class FirebaseController {
             const urlencoded = new URLSearchParams();
             urlencoded.append('grant_type', 'refresh_token');
             urlencoded.append('refresh_token', tokenDto.refreshToken);
-            var requestOptions = {
+            const requestOptions = {
                 method: 'POST',
                 headers: myHeaders,
                 body: urlencoded,
