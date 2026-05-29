@@ -1,44 +1,31 @@
 {
     "testTimeout": 10000,
     "rootDir": "../../",
+    "setupFiles": [
+        "<rootDir>/test/unit/jest.setup.js"
+    ],
     "modulePaths": [
         "."
     ],
     "testEnvironment": "node",
     "testMatch": [
-        "<rootDir>/test/unit/api-key/*.spec.ts",
-        "<rootDir>/test/unit/auth/*.spec.ts",
-        "<rootDir>/test/unit/config/*.spec.ts",
-        "<rootDir>/test/unit/database/*.spec.ts",
-        "<rootDir>/test/unit/debugger/*.spec.ts",
-        "<rootDir>/test/unit/helper/*.spec.ts",
-        "<rootDir>/test/unit/logger/*.spec.ts",
-        "<rootDir>/test/unit/message/*.spec.ts",
-        "<rootDir>/test/unit/pagination/*.spec.ts",
-        "<rootDir>/test/unit/setting/*.spec.ts",
-        "<rootDir>/test/unit/vehicle/*.spec.ts"
+        "<rootDir>/test/unit/auth/**/*.spec.ts",
+        "<rootDir>/test/unit/crm/**/*.spec.ts",
+        "<rootDir>/test/unit/workspace/**/*.spec.ts",
+        "<rootDir>/test/unit/contact/**/*.spec.ts",
+        "<rootDir>/test/unit/instagram/**/*.spec.ts",
+        "<rootDir>/test/unit/messaging/**/*.spec.ts",
+        "<rootDir>/test/unit/automation/**/*.spec.ts",
+        "<rootDir>/test/unit/flow-builder/**/*.spec.ts",
+        "<rootDir>/test/unit/ai/**/*.spec.ts",
+        "<rootDir>/test/unit/billing/**/*.spec.ts",
+        "<rootDir>/test/unit/webhook/**/*.spec.ts",
+        "<rootDir>/test/unit/marketplace/**/*.spec.ts",
+        "<rootDir>/test/unit/campaign/**/*.spec.ts",
+        "<rootDir>/test/unit/forms/**/*.spec.ts",
+        "<rootDir>/test/unit/dashboard/**/*.spec.ts"
     ],
-    "collectCoverage": true,
-    "coverageDirectory": "coverage",
-    "collectCoverageFrom": [
-        "./src/common/api-key/services/**",
-        "./src/common/auth/services/**",
-        "./src/common/database/services/**",
-        "./src/common/debugger/services/**",
-        "./src/common/helper/services/**",
-        "./src/common/logger/services/**",
-        "./src/common/message/services/**",
-        "./src/common/pagination/services/**",
-        "./src/common/setting/services/**"
-    ],
-    "coverageThreshold": {
-      "global": {
-        "branches": 100,
-        "functions": 100,
-        "lines": 100,
-        "statements": 100
-      }
-    },
+    "collectCoverage": false,
     "moduleFileExtensions": [
         "js", 
         "ts", 

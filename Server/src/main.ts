@@ -1,3 +1,17 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
+/* eslint-disable @typescript-eslint/no-var-requires */
+// Shim SlowBuffer to prevent crash in buffer-equal-constant-time dependency on startup under newer Node.js versions
+const bufferModule = require('buffer');
+if (!bufferModule.SlowBuffer) {
+    bufferModule.SlowBuffer = function() {};
+}
+if (!bufferModule.SlowBuffer.prototype) {
+    bufferModule.SlowBuffer.prototype = {};
+}
+if (!bufferModule.SlowBuffer.prototype.equal) {
+    bufferModule.SlowBuffer.prototype.equal = function() {};
+}
+
 import { NestApplication, NestFactory } from '@nestjs/core';
 import { Logger, VersioningType } from '@nestjs/common';
 import { AppModule } from 'src/app/app.module';

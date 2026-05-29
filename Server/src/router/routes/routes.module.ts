@@ -33,6 +33,7 @@ import { AnalyticsModule } from 'src/modules/analytics/analytics.module';
 import { MarketplaceModule } from 'src/modules/marketplace/marketplace.module';
 import { DevPlatformModule } from 'src/modules/dev-platform/dev-platform.module';
 import { AdminModule } from 'src/modules/admin/admin.module';
+import { CrmModule } from 'src/modules/crm/crm.module';
 
 // New Controllers
 import { AuthController } from 'src/modules/auth/controllers/auth.controller';
@@ -59,6 +60,7 @@ import { AnalyticsController } from 'src/modules/analytics/controllers/analytics
 import { MarketplaceController } from 'src/modules/marketplace/controllers/marketplace.controller';
 import { DevPlatformController } from 'src/modules/dev-platform/controllers/dev-platform.controller';
 import { AdminController } from 'src/modules/admin/controllers/admin.controller';
+import { CrmController } from 'src/modules/crm/controllers/crm.controller';
 
 @Module({
     controllers: [
@@ -91,6 +93,7 @@ import { AdminController } from 'src/modules/admin/controllers/admin.controller'
         MarketplaceController,
         DevPlatformController,
         AdminController,
+        CrmController,
     ],
     providers: [],
     exports: [],
@@ -124,6 +127,7 @@ import { AdminController } from 'src/modules/admin/controllers/admin.controller'
         MarketplaceModule,
         DevPlatformModule,
         AdminModule,
+        CrmModule,
     ],
 })
 export class RoutesModule {}
